@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace => TimeMapper 인터페이스 경로 -->
+<mapper namespace="org.scoula.mapper.TimeMapper">
+
+    <!-- String getTime2()의 메서드명 + resultType - 리턴타입 지정   -->
+    <select id="getTime2" resultType="string">
+        SELECT sysdate()
+    </select>
+    <!--    <select id="getTime2" resultType="java.lang.String"></select>-->
+</mapper>

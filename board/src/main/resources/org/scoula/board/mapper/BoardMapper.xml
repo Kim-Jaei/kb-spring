@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.scoula.board.mapper.BoardMapper">
+
+    <insert id="create">
+        insert into tbl_board (title, content, writer)
+        values (#{title}, #{content}, #{writer}) /* 여러개라서 정확하게 명명 */
+    </insert>
+
+    <select id="getList" resultType="BoardVO">
+    /* 컴파일된 데이터니까 그냥 써 */
+    <![CDATA[
+            select * from tbl_board order by no desc
+            ]]>
+    </select>
+
+    <select id="get" resultType="BoardVO">
+        select * from tbl_board where no = #{no} /* 1개라서 이름 마음대로 지정해줘도 됨 */
+    </select>
+
+</mapper>

@@ -1,4 +1,5 @@
 package org.scoula.board.service;
+import org.scoula.board.domain.BoardAttachmentVO;
 import org.scoula.board.dto.BoardDTO;
 import org.scoula.board.dto.BoardDTO;
 
@@ -15,4 +16,8 @@ public interface BoardService
     public boolean update(BoardDTO board);
 
     public boolean delete(Long no);
+
+    public BoardAttachmentVO getAttachment(Long no); // 다운 받을 때 사용
+
+    public boolean deleteAttachment(Long no); // 수정할 때 삭제
 }
